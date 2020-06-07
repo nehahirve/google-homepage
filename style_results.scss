@@ -483,3 +483,11 @@ footer strong {
         margin-right: 23px;
     }
 }
+
+a:hover .mainlink{
+    text-decoration: underline;
+}
+
+#seealso a:hover, .relatedsearch a:hover {
+    text-decoration: underline;
+}

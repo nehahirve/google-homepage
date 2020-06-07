@@ -474,3 +474,11 @@ footer strong {
 #footernav li a {
   margin-right: 23px;
 }
+
+a:hover .mainlink {
+  text-decoration: underline;
+}
+
+#seealso a:hover, .relatedsearch a:hover {
+  text-decoration: underline;
+}
