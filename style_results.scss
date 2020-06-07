@@ -7,7 +7,7 @@ body {
 }
 
 header div, nav {
-   
+   background-color: white;
 }
 
 #topbar {
@@ -24,7 +24,7 @@ header div, nav {
 }
 
 #leftcontent {
-    margin-left: 25px;
+    margin-left: 24px;
     margin-top: 20px;
     display: flex;
     align-items: center;
@@ -128,42 +128,59 @@ nav {
     width: 100%;
     height: 47px;
     position: fixed;
-    padding-left: 180px;
+    padding-left: 170px;
     top: 75px;
     border-bottom: 1px solid rgba(0,0,0,.05);
 }
 
 
 #centernav {
-    padding-top: 15px;
-
     width: 652px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     font-size: 13px;
-
+    height: 43px;
+   
     svg {
         transform: scale(.65);
+        display: inline-block;
+    }
+    
+    #navleft {
+        
+        height: 100%;
     }
 
-    #navleft {
-        display: flex;
+    #navleft span {
+        vertical-align: middle;
         opacity: 0.7;
     }
-
+    
     #navleft a {
-        display: flex;
-        align-items: center;
+        padding: 2px 15px 0px 0px;
+        display: inline-block;
+        height: 100%;
         line-height: 16px;
-        margin-right: 10px;
+        
     }
 }
 
+#navright {
+    align-self: center;
+    margin-top: 5px;
+}
 #navright a {
     opacity: 0.7;
     font-size: 13px;
     margin-left: 15px;
+}
+
+#current {
+    color: #4285F4;
+    border-bottom: 3px solid #4285F4;
+    span {
+        opacity: 1 !important;
+    }
 }
 
 
@@ -171,10 +188,12 @@ nav {
     position: relative;
     top: 133px;
     width: 100%;
+    height: 2770px;
+
 }
 
 main {
-    min-height: 1200px;
+    min-height: 100%;
     position: relative;
     width: 652px;
     margin-left: 180px;
@@ -196,6 +215,19 @@ main {
 .featured {
     height: 193px;
     margin-bottom: 51px;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
+    .featuretext {
+        margin-bottom: 10px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    span {
+        opacity: 0.7;
+    }
 }
 
 .searchresult {
@@ -243,28 +275,108 @@ h2 {
     margin-bottom: 15px;
 }
 
-.video {
-    display: inline-block;
-    height: 300px;
-    width: 210px;
-    margin-right: 6px;
+.videos {
+    display: flex;
     margin-bottom: 51px;
+    
 }
+
+.video {
+    height: 300px;
+    width: 215px;
+    margin-right: 6px;
+    span {
+        color: #202124;
+        opacity: 1;
+    }
+
+    .videotext {
+        display: flex;
+
+        height: 150px;
+        flex-direction: column;
+        padding-bottom: 0px;
+        justify-content: space-between;
+    }
+    .preview {
+        font-size: 14px;
+        padding-left: 15px;
+        padding-right: 0px;
+    }
+    .videolink {
+        font-size: 16px;
+        line-height: 24px;
+        color: #1a0dab;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    box-sizing: border-box;
+    
+}
+
 video {
     width: 100%;
     display: inline;
     border-top-left-radius: inherit;
     border-top-right-radius: inherit;
+    margin-bottom: 10px;
 }
 
 .relatedsearch {
-    height: 200px;
+    position: relative;
+    height: 230px;
     margin-bottom: 31px;
+    padding: 16px;
+    padding-top: 17px;
+    box-sizing: border-box;
+
+    .relatedsearchtext {
+        font-size: 14px;
+        opacity: 0.7;
+        margin-bottom: 7px;
+    }
+
+    h2 {
+        margin-bottom: 5px;
+    }
+
+    .viewmore {
+        opacity: 0.7;
+        font-size: 14px;
+        float: right;
+        position: relative;
+        top: -20px;
+
+    }
+
+    .relatedlinks {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+    }
+
+    a {
+        font-size: 14px;
+        line-height: 18px;
+        color: #1a0dab;
+    }
+
+    a img {
+        display: block;
+        margin-bottom: 3px;
+
+    }
 }
 
+
 .feedback {
-    margin-top: -24px;
-    float: right;
+    margin-top: 28px;
+    position: relative;
+    width: 100%;
+    text-align: right;
+    margin-bottom: 12px;
     padding-right: 7px;
     font-size: 12px;
     font-style: italic;
@@ -273,7 +385,8 @@ video {
 
 #seealso {
     margin-top: 23px;
-    margin-bottom: 117px;
+
+    position: relative;
     font-weight: bold;
     font-size: 16px;
 }
@@ -301,12 +414,21 @@ video {
 
 }
 
-
+#nextpage {
+    margin-top: 30px;
+}
+#nextpage img {
+    position: relative;
+    display: block;
+    width: 330px;
+    margin: auto;
+}
 
 //FOOTER STYLING
 
 footer {
     position: relative;
+    bottom: 0;
     line-height: 40px;
     color:rgba(0,0,0,.54);
     background-color: #f2f2f2;
@@ -361,4 +483,3 @@ footer strong {
         margin-right: 23px;
     }
 }
-
